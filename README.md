@@ -1,58 +1,34 @@
-# ZetZ (ZZ) Language Documentation
+![logo](logo2.png?raw=true)
 
-Welcome to the ZetZ (ZZ) language documentation. ZZ is a systems programming language targeting bare metal MCUs, embedded Linux, WASM, and other environments where C is the de facto standard.
 
-## What is ZZ?
+ZetZ is for systems without dynamic memory, where C is and will remain the defacto standard system interface.<br>
+Target bare metal MCUs, embedded linux, WASM, and embed it in other languages.<br>
 
-ZZ is a safe systems programming language that compiles to plain C. It provides:
+You can also use it to build cross platform libraries, with a clean portable C-standard api. <br>
+Zetz plays nice with others and does not require rewriting everything in zetz to be useful in large projects.
 
-- **Formal verification** via symbolic execution at compile time (no runtime overhead)
-- **Plain C ABI** — just include the header in any C project
-- **Stack-based memory** — no heap allocation required
-- **Namespace management** — automatic header generation and declaration ordering
-- **Interoperability** — works with any C compiler, including vendor-specific toolchains
+A major innovative feature is that all code is formally verified by symbolic execution in a virtual machine,
+at compile time.
 
-## Who is ZZ for?
+### quick quick start
 
-ZZ is designed for developers who:
+1. Install https://github.com/Z3Prover/z3 usually through a distro package 
+2. Get the latest binary from http://bin.zetz.it
 
-- Work on systems without dynamic memory
-- Need to produce C-compatible libraries
-- Want safety guarantees without runtime cost
-- Target embedded systems, MCUs, WASM, or bare-metal environments
+📖 **[Full Documentation](docs/README.md)**
 
-## Documentation Overview
+## Discord Community
 
-- [Prerequisites](getting-started/prerequisites.md)
-- [Installation & Setup](getting-started/installation.md)
-- [Hello World](getting-started/hello-world.md)
-- [Project Structure](getting-started/project-structure.md)
-- [Building & Running](getting-started/building.md)
-- [Core Concepts](concepts/README.md)
-  - [Safety & Symbolic Execution](concepts/safety.md)
-  - [Types & Memory](concepts/types-and-memory.md)
-  - [Functions](concepts/functions.md)
-  - [Structs](concepts/structs.md)
-  - [Modules](concepts/modules.md)
-  - [Visibility](concepts/visibility.md)
-- [Dependencies](dependencies/README.md)
-  - [zz.toml](dependencies/zz-toml.md)
-  - [User Space Repositories](dependencies/user-space-repositories.md)
-- [Interoperability](interop/README.md)
-  - [Using C Libraries](interop/using-c-libraries.md)
-  - [Exporting to C](interop/exporting-to-c.md)
-- [Formal Verification](verification/README.md)
-  - [Z3 & Yices](verification/z3-yices.md)
-  - [Assertions & Invariants](verification/assertions.md)
-- [Standard Library](stdlib/README.md)
-- [Examples](examples/README.md)
+https://discord.gg/EsMxjWtcf5
 
-## Community
+## editor support
 
-- [Discord](https://discord.gg/EsMxjWtcf5)
-- [GitHub](https://github.com/zetzit/zz)
+- Emacs: [zetz-mode](https://github.com/damon-kwok/zetz-mode)
+- Vim: [zz.vim](https://github.com/zetzit/vim)
 
-## Editor Support
 
-- **Emacs**: [zetz-mode](https://github.com/damon-kwok/zetz-mode)
-- **Vim**: [zz.vim](https://github.com/zetzit/vim)
+### how it looks
+
+ZZ has some go and rust aesthetics, but remains a C dialect at the core.
+
+
